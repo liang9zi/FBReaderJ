@@ -49,7 +49,7 @@ import org.geometerplus.fbreader.library.*;
 import org.geometerplus.fbreader.booksdb.*;
 import org.geometerplus.fbreader.network.HtmlUtil;
 
-import org.geometerplus.android.fbreader.FBReader;
+import org.geometerplus.android.fbreader.*;
 import org.geometerplus.android.fbreader.preferences.EditBookInfoActivity;
 
 public class BookInfoActivity extends Activity {
@@ -93,6 +93,7 @@ public class BookInfoActivity extends Activity {
 	protected void onStart() {
 		super.onStart();
 
+		OrientationUtil.setOrientation(this, getIntent());
 		final Book book = myLibrary.getBookByFile(myFile);
 
 		if (book != null) {
@@ -121,7 +122,8 @@ public class BookInfoActivity extends Activity {
 		});
 		setupButton(R.id.book_info_button_edit, "editInfo", new View.OnClickListener() {
 			public void onClick(View view) {
-				startActivityForResult(
+				OrientationUtil.startActivityForResult(
+					BookInfoActivity.this,
 					new Intent(getApplicationContext(), EditBookInfoActivity.class)
 						.putExtra(CURRENT_BOOK_PATH_KEY, myFile.getPath()),
 					1
@@ -143,6 +145,11 @@ public class BookInfoActivity extends Activity {
 		final View root = findViewById(R.id.book_info_root);
 		root.invalidate();
 		root.requestLayout();
+	}
+
+	@Override
+	protected void onNewIntent(Intent intent) {
+		OrientationUtil.setOrientation(this, intent);
 	}
 
 	@Override
