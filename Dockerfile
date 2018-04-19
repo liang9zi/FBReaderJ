@@ -8,9 +8,9 @@
 # https://developer.android.google.cn/studio/index.html
 # ------------------------------------------------------- #
 
-FROM registry.cn-beijing.aliyuncs.com/android_ci_sdk/android_ci:v1.0
+FROM liang9zi/android_ci_sdk
 
-MAINTAINER liang9zi@163.com
+MAINTAINER liang9zi
 
 ENV WORK_DIR /opt
 ENV JAVA_HOME ${WORK_DIR}/jdk1.8.0_65
