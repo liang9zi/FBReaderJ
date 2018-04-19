@@ -10,7 +10,7 @@
 
 FROM ubuntu:16.04
 
-MAINTAINER liang9zi
+MAINTAINER liang9zi@163.com
 
 ENV WORK_DIR /opt
 ENV JAVA_HOME ${WORK_DIR}/jdk1.8.0_65
