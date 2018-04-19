@@ -8,7 +8,7 @@
 # https://developer.android.google.cn/studio/index.html
 # ------------------------------------------------------- #
 
-FROM ubuntu:16.04
+FROM xujianliang/android_ci_sdk:1.0
 
 MAINTAINER liang9zi@163.com
 
