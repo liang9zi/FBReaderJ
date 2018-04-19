@@ -10,6 +10,8 @@
 
 FROM ubuntu:16.04
 
+MAINTAINER liang9zi
+
 ENV WORK_DIR /opt
 ENV JAVA_HOME ${WORK_DIR}/jdk1.8.0_65
 ENV JDK_FILENAME jdk-8u65-linux-x64.tar.gz
