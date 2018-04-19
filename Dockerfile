@@ -8,7 +8,7 @@
 # https://developer.android.google.cn/studio/index.html
 # ------------------------------------------------------- #
 
-FROM registry.cn-beijing.aliyuncs.com/android_ci_sdk/android_ci
+FROM android_ci_sdk/android_ci:v1.0
 
 MAINTAINER liang9zi@163.com
 
