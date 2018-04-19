@@ -8,9 +8,9 @@
 # https://developer.android.google.cn/studio/index.html
 # ------------------------------------------------------- #
 
-FROM liang9zi/android_ci_sdk
+FROM liang9zi/android_ci_sdk:v1.0
 
-MAINTAINER liang9zi
+MAINTAINER liang9zi <liang9zi@163.com>
 
 ENV WORK_DIR /opt
 ENV JAVA_HOME ${WORK_DIR}/jdk1.8.0_65
